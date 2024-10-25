@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Calculator</h1>
+        <form action="/operation" method="POST" class="calculator-form">
+            <label for="operation-type">Choose an operation type:</label>
+            <select id="operation-type" name="operation-type">
+                <option value="algebraic">Algebraic</option>
+                <option value="trigonometric">Trigonometric</option>
+                <option value="miscellaneous">Miscellaneous</option>
+            </select>
+            <input type="submit" value="Next">
+        </form>
+    </div>
+</body>
+</html>

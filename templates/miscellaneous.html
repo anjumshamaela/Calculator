@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous Calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Miscellaneous Calculator</h1>
+        <form action="/miscellaneous" method="POST" class="calculator-form">
+            <label for="operation">Choose an operation:</label>
+            <select id="operation" name="operation">
+                <option value="log10">Base-10 Logarithm</option>
+                <option value="log2">Base-2 Logarithm</option>
+                <option value="sqrt">Square Root</option>
+                <option value="degrees">Radians to Degrees</option>
+                <option value="radians">Degrees to Radians</option>
+                <option value="percentage">Percentage</option>
+            </select>
+            <input type="number" name="number1" id="number1" placeholder="Enter a number" required>
+            <div id="second-input" style="display: none;">
+                <input type="number" name="number2" id="number2" placeholder="Enter second number (if applicable)">
+            </div>
+            <input type="submit" value="Calculate">
+        </form>
+        <a href="/" class="go-back">Go Back</a>
+    </div>
+    <script>
+        document.getElementById('operation').addEventListener('change', function() {
+            var secondInput = document.getElementById('second-input');
+            var operation = this.value;
+            if (operation === 'percentage') {
+                secondInput.style.display = 'block';
+            } else {
+                secondInput.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebraic Calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Algebraic Calculator</h1>
+        <form action="/algebraic" method="POST" class="calculator-form">
+            <label for="operation">Choose an operation:</label>
+            <select id="operation" name="operation">
+                <option value="add">Addition</option>
+                <option value="subtract">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+                <option value="modulus">Modulus</option>
+                <option value="power">Power</option>
+            </select>
+            <input type="number" name="number1" id="number1" placeholder="Enter first number" required>
+            <input type="number" name="number2" id="number2" placeholder="Enter second number" required>
+            <input type="submit" value="Calculate">
+        </form>
+        <a href="/" class="go-back">Go Back</a>
+    </div>
+</body>
+</html>
